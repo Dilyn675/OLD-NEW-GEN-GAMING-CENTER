@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Center</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+        }
+        .banner-img {
+            width: 100%;
+            height: auto;
+        }
+        .navigation {
+            background-color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navigation a {
+            display: inline-block;
+            padding: 5px 15px;
+            text-decoration: none;
+            color: #6535C0; /* color of font */
+        }
+        .content {
+            text-align: center; /* center-aligning the content */
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 33px; /* heading font size */
+            color: #6535C0;
+        }
+        .content p {
+            font-size: 25px; /* paragraph font size */
+            padding-top: 0px;
+            padding-left: 240px; /* left padding to the paragraph */
+            padding-right: 240px;
+        }
+        
+         form {
+             margin-bottom: 60px; /* space added to the bottom of the form*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <a href="Webpage.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </header>
+    
+    <img src="https://i.ibb.co/hdC8ppv/Untitled-design-1.png" alt="Banner Image" class="banner-img">
+    
+    <div class="content">
+        <h2>Contact Us</h2>
+
+  <form action="/submissions.php">
+  <div style="display: inline-block;">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name"><br><br>
+  </div>
+  <div style="display: inline-block;">
+    <label for="email">Email</label><br>
+    <input type="text" id="email" name="email"><br><br>
+  </div>
+  <br>
+      <label for="message">Message</label><br>
+  <textarea id="msg" name="msg" rows="4" cols="45"></textarea><br><br>
+  <input type="submit" value="Submit">
+</form>
+    </div>
+    
+</body>
+</html>
