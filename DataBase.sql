@@ -25,4 +25,9 @@ CREATE TABLE Games (
   Price DECIMAL(10,2)
   );
 
-CREATE TABLE 
+CREATE TABLE consoles (
+  ConsoleID Primary Key, 
+  ConsoleName VARCHAR(255),
+  ConsoleAge VARCHAR(255),
+  ConsolePrice DECIMAL(10,2_),
+  );
