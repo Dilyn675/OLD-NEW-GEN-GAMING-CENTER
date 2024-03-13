@@ -1,0 +1,246 @@
+
+<html>
+<head>
+<title>Checkout</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    
+    .navbar {
+        background-color: #6535C0;
+        overflow: hidden;
+        
+    }
+    
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        
+    }
+    
+    .navbar a:hover {
+        background-color: #A477D1;
+        color: white;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+    }
+
+    .products {
+        flex: 1;
+        padding-right: 20px;
+    }
+    
+    .checkout-form {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .checkout-form h2 {
+        text-align: center;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    th, td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        
+    }
+    
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .payment-info input[type="text"] {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+    }
+    
+    .payment-info input[type="text"]:last-child {
+        margin-right: 0;
+    }
+    
+    .payment-info label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .shipping-method label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .checkbox-label {
+        font-weight: normal;
+        margin-left: 5px;
+    }
+    
+    button {
+        background-color: #6535C0;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 50%;
+        font-size: 16px;
+        align-items: center;
+    }
+    
+    button:hover {
+        background-color: #A477D1;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">About Us</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+    
+</div>
+
+    
+    
+    
+<div class="container">
+    <div class="products">
+        <h2>Products</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Product 1</td>
+                <td>1</td>
+                <td>$XX.XX</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>2</td>
+                <td>$XX.XX</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>-</td>
+                <td>$XX.XX</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Total</strong></td>
+                <td><strong>$XXX.XX</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    
+    
+    
+    
+    <div class="checkout-form">
+        <h2>Checkout</h2>
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+        </div>
+
+        <div class="form-group">
+            <label for="zipcode">Zip/Postal Code</label>
+            <input type="text" id="zipcode" name="zipcode">
+        </div>
+
+        <div class="form-group payment-info">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" name="cardnumber">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv">
+            <label for="cardholder">Cardholder Name</label>
+            <input type="text" id="cardholder" name="cardholder">
+        </div>
+
+        <div class="form-group shipping-method">
+            <label>Shipping Method</label>
+            <input type="radio" id="standard" name="shipping" value="standard">
+            <label for="standard" class="checkbox-label">Standard Shipping (3-5 business days) - $7.00</label>
+            <br>
+            <input type="radio" id="expedited" name="shipping" value="expedited">
+            <label for="expedited" class="checkbox-label">Expedited Shipping (1-2 business days) - $15.00</label>
+        </div>
+
+        <div class="form-group">
+        <button type="submit">Place Order</button>
+            
+        </div>
+        
+    </div>
+    </div>
+    </body>
+</html>
