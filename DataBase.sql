@@ -21,7 +21,7 @@ CREATE TABLE Games (
   VideoGameName VARCHAR(255),
   Genre VARCHAR(255), 
   EsrbRating VARCHAR(255),
-  Age VARCHAR(255),
+  GameAge VARCHAR(255),
   Price DECIMAL(10,2)
   );
 
