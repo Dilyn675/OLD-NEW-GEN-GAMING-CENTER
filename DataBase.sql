@@ -15,3 +15,12 @@ ShippingAddress VARCHAR (255),
 CreditCardNumber VARCHAR(255),
 CreditCardExpirationDate DATE
 );
+
+CREATE TABLE Games (
+  VideoGameID PRIMARY KEY,
+  VideoGameName VARCHAR(255),
+  Genre VARCHAR(255), 
+  EsrbRating VARCHAR(255)
+  );
+
+CREATE TABLE 
