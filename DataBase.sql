@@ -33,10 +33,10 @@ CREATE TABLE consoles (
   );
 
 CREATE TABLE QuantityonHand（ 
-PartNumber INT,
+VideoGameID INT,
 Quantity INT, 
-PRIMARY KEY （PartNumber）， 
-FOREIGN KEY（PartNumber）REFERENCES Products（PartNumber）
+PRIMARY KEY （VideoGameID）， 
+FOREIGN KEY（VideoGameID）REFERENCES Games（VideoGameID）
 ）；
 
 -- Create table for orders
@@ -53,11 +53,11 @@ FOREIGN KEY (CustomerID) REFERENCES Users (UserID)
 
 —Create table for order details
 CREATE TABLE OrderDetails (
-OrderID INT, PartNumber INT, Quantity INT,
+OrderID INT, VideoGameID INT, Quantity INT,
 Price DECIMAL (10, 2),
-PRIMARY KEY (OrderID, PartNumber),
+PRIMARY KEY (OrderID, VideoGameID),
 FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-FOREIGN KEY (PartNumber) REFERENCES Products(PartNumber)
+FOREIGN KEY (VideoGameID) REFERENCES Games(VideoGameID)
 );
 
 —Create table for inventory details
@@ -67,7 +67,7 @@ Name VARCHAR(255),
 Description VARCHAR(255), 
 PartNumber INT, 
 QuantityOnHand INT, 
-FOREIGN KEY (PartNumber) REFERENCES Products (PartNumber) 
+FOREIGN KEY (VideoGameID) REFERENCES Games (VideoGameID) 
 );
 
 - Create table for shipping and handling charges 
