@@ -51,7 +51,7 @@ Status VARCHAR (50),
 FOREIGN KEY (CustomerID) REFERENCES Users (UserID)
 );
 
-—Create table for order details
+--Create table for order details
 CREATE TABLE OrderDetails (
 OrderID INT, VideoGameID INT, Quantity INT,
 Price DECIMAL (10, 2),
@@ -70,7 +70,7 @@ QuantityOnHand INT,
 FOREIGN KEY (VideoGameID) REFERENCES Games (VideoGameID) 
 );
 
-- Create table for shipping and handling charges 
+--Create table for shipping and handling charges 
 CREATE TABLE ShippingHandlingCharges ( 
 WeightBracket INT PRIMARY KEY, 
 Charge DECIMAL (10,2) 
