@@ -26,32 +26,32 @@ CREATE TABLE Games (
   );
 
 CREATE TABLE consoles (
-  ConsoleID Primary Key, 
-  ConsoleName VARCHAR(255),
-  ConsoleAge VARCHAR(255),
-  ConsolePrice DECIMAL(10,2_),
-  );
+ConsoleID INt PRIMARY KEY, 
+ConsoleName VARCHAR(255),
+ConsoleAge VARCHAR(255),
+ConsolePrice DECIMAL(10,2)
+);
 
-CREATE TABLE QuantityonHand（ 
+CREATE TABLE QuantityonHand( 
 VideoGameID INT,
 Quantity INT, 
 PRIMARY KEY （VideoGameID）， 
 FOREIGN KEY（VideoGameID）REFERENCES Games（VideoGameID）
-）；
+)；
 
--- Create table for orders
+
 CREATE TABLE Orders (
-Order ID INT AUTO_INCREMENT PRIMARY KEY,
+OrderID INT AUTO_INCREMENT PRIMARY KEY,
 Customer ID INT,
 TotalWeight DECIMAL (10,2),
 TotalPrice DECIMAL (10, 2),
 ShippingCharge DECIMAL (10,2),
 Date DATE,
 Status VARCHAR (50),
-FOREIGN KEY (CustomerID) REFERENCES Users (UserID)
+FOREIGN KEY (CustomerID) REFERENCES Users (UserID))
 );
 
---Create table for order details
+
 CREATE TABLE OrderDetails (
 OrderID INT, VideoGameID INT, Quantity INT,
 Price DECIMAL (10, 2),
@@ -60,7 +60,7 @@ FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
 FOREIGN KEY (VideoGameID) REFERENCES Games(VideoGameID)
 );
 
-—Create table for inventory details
+
 CREATE TABLE Inventory ( 
 ProductID INT PRIMARY KEY, 
 Name VARCHAR(255), 
@@ -70,7 +70,7 @@ QuantityOnHand INT,
 FOREIGN KEY (VideoGameID) REFERENCES Games (VideoGameID) 
 );
 
---Create table for shipping and handling charges 
+ 
 CREATE TABLE ShippingHandlingCharges ( 
 WeightBracket INT PRIMARY KEY, 
 Charge DECIMAL (10,2) 
