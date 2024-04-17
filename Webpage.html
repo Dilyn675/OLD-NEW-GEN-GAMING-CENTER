@@ -10,6 +10,7 @@
             font-family: Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            padding-bottom: 30px;
         }
         header {
             background-color: #fff;
@@ -46,6 +47,19 @@
             padding-left: 240px; /* left padding to the paragraph */
             padding-right: 240px;
         }
+        
+        .custom-button {
+        background-color: #6535C0;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+     }
     </style>
 </head>
 <body>
@@ -57,9 +71,6 @@
             <a href="AllProducts.html">Products</a>
             <a href="Contact.html">Contact</a>
         </div>
-     <form action="register.php" method="POST">
-        <input type="submit" value="Register">
-    </form>
     </header>
     
     <img src="https://i.ibb.co/hdC8ppv/Untitled-design-1.png" alt="Banner Image" class="banner-img">
@@ -67,7 +78,12 @@
     <div class="content">
         <h2>About Us</h2>
         <p>Welcome to Old\New Gen Gaming Center, your ultimate destination for all things gaming in Chicago! Whether you're a seasoned gamer or just starting out, we've got something for everyone. Explore our wide selection of new releases, old classics, and retro gems that will take you on a nostalgic journey. From action-packed adventures to mind-bending puzzles, our shelves are stocked with games to suit every taste. Plus, with our convenient shipping options, you can enjoy gaming goodness delivered right to your doorstep</p>
+        
+         <form action="register.php" method="POST">
+        <input type="submit" value="Register Now!" class="custom-button">
+    </form>
     </div>
+    
     
 </body>
 </html>
